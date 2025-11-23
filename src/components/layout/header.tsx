@@ -28,13 +28,16 @@ import { Input } from '../ui/input';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Skeleton } from '../ui/skeleton';
+import { Locale } from '@/i18n-config';
+import LanguageSwitcher from './language-switcher';
 
 const mainNav = categories.map((category) => ({
   href: `/category/${category.slug}`,
   label: category.name,
+  slug: category.slug,
 }));
 
-export default function Header() {
+export default function Header({ lang }: { lang: Locale }) {
   const isMobile = useIsMobile();
   const { isAuthenticated, user, logout, isUserLoading } = useAuth();
   const [showSearch, setShowSearch] = useState(false);
@@ -45,7 +48,7 @@ export default function Header() {
     const formData = new FormData(e.currentTarget);
     const query = formData.get('search') as string;
     if (query) {
-      router.push(`/search?q=${encodeURIComponent(query)}`);
+      router.push(`/${lang}/search?q=${encodeURIComponent(query)}`);
       setShowSearch(false);
       (e.target as HTMLFormElement).reset();
     }
@@ -87,7 +90,7 @@ export default function Header() {
     }
     return (
       <Button asChild variant="ghost" size={isMobile ? 'icon' : 'default'}>
-        <Link href="/login">
+        <Link href={`/${lang}/login`}>
           {isMobile ? <LogIn /> : 'Login'}
         </Link>
       </Button>
@@ -99,7 +102,7 @@ export default function Header() {
       {mainNav.map((item) => (
         <Link
           key={item.href}
-          href={item.href}
+          href={`/${lang}${item.href}`}
           className="transition-colors hover:text-primary"
         >
           {item.label}
@@ -118,14 +121,14 @@ export default function Header() {
       </SheetTrigger>
       <SheetContent side="left">
         <SheetHeader>
-          <SheetTitle><Logo /></SheetTitle>
+          <SheetTitle><Logo lang={lang} /></SheetTitle>
         </SheetHeader>
         <div className="py-4">
           <nav className="grid gap-4">
             {mainNav.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={`/${lang}${item.href}`}
                 className="text-lg font-semibold transition-colors hover:text-primary"
               >
                 {item.label}
@@ -142,11 +145,11 @@ export default function Header() {
       <div className="container flex h-16 items-center">
         <MobileNav />
         <div className="hidden md:flex">
-         <Logo />
+         <Logo lang={lang} />
         </div>
         <div className="flex flex-1 items-center justify-center md:justify-start">
            <div className="md:hidden">
-            <Logo />
+            <Logo lang={lang} />
            </div>
           <div className="md:ml-6">
             <DesktopNav />
@@ -161,12 +164,13 @@ export default function Header() {
                 {showSearch && (
                     <div className="absolute top-full right-0 mt-2 w-64">
                          <form onSubmit={handleSearch} className="relative">
-                            <Input name="search" placeholder="Search products..." className="w-full" autoFocus />
+                            <Input name="search" placeholder="Produkte suchen..." className="w-full" autoFocus />
                          </form>
                     </div>
                 )}
             </div>
-          <CartIcon />
+            <LanguageSwitcher />
+          <CartIcon lang={lang} />
           <AuthButton />
         </div>
       </div>

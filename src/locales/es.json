@@ -1,0 +1,60 @@
+{
+    "home": {
+        "heroTitle": "Elegancia en cada hilo",
+        "heroSubtitle": "Descubre colecciones curadas de esenciales modernos. Calidad sin compromisos y diseño atemporal, entregados en tu puerta.",
+        "shopNow": "Comprar ahora",
+        "shopByCategory": "Comprar por categoría",
+        "featuredProducts": "Estilos de invierno en tendencia"
+    },
+    "header": {
+        "searchPlaceholder": "Buscar productos..."
+    },
+    "categories": {
+        "mens-clothing": "Ropa de hombre",
+        "womens-clothing": "Ropa de mujer",
+        "accessories": "Accesorios",
+        "winter-collection": "Colección de invierno"
+    },
+    "product": {
+        "description": "Descripción",
+        "size": "Talla",
+        "addToCart": "Añadir al carrito",
+        "reviews": "Opiniones de clientes",
+        "translate": "Traducir",
+        "oneSize": "Talla única"
+    },
+    "cart": {
+        "title": "Tu carrito",
+        "empty": "Tu carrito está vacío",
+        "continueShopping": "Seguir comprando",
+        "summary": "Resumen del pedido",
+        "subtotal": "Subtotal",
+        "taxes": "Impuestos",
+        "total": "Total",
+        "checkout": "Proceder al pago",
+        "remove": "Eliminar artículo"
+    },
+    "checkout": {
+        "title": "Pago",
+        "shippingInfo": "Información de envío",
+        "paymentDetails": "Detalles de pago",
+        "orderSummary": "Resumen del pedido",
+        "pay": "Pagar"
+    },
+    "auth": {
+        "login": "Iniciar sesión",
+        "logout": "Cerrar sesión",
+        "signup": "Registrarse",
+        "welcomeBack": "Bienvenido de nuevo",
+        "loginPrompt": "Introduce tus credenciales para acceder a tu cuenta",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "signIn": "Iniciar sesión",
+        "continueWith": "O continuar con",
+        "noAccount": "¿No tienes una cuenta?",
+        "createAccount": "Crear una cuenta",
+        "createAccountPrompt": "Únete a nosotros y descubre un mundo de elegancia.",
+        "name": "Nombre",
+        "alreadyAccount": "¿Ya tienes una cuenta?"
+    }
+}

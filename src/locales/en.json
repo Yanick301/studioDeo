@@ -1,0 +1,60 @@
+{
+    "home": {
+        "heroTitle": "Elegance in Every Thread",
+        "heroSubtitle": "Discover curated collections of modern essentials. Uncompromising quality and timeless design, delivered to your door.",
+        "shopNow": "Shop Now",
+        "shopByCategory": "Shop by Category",
+        "featuredProducts": "Trending Winter Styles"
+    },
+    "header": {
+        "searchPlaceholder": "Search products..."
+    },
+    "categories": {
+        "mens-clothing": "Men's Clothing",
+        "womens-clothing": "Women's Clothing",
+        "accessories": "Accessories",
+        "winter-collection": "Winter Collection"
+    },
+    "product": {
+        "description": "Description",
+        "size": "Size",
+        "addToCart": "Add to Cart",
+        "reviews": "Customer Reviews",
+        "translate": "Translate",
+        "oneSize": "One Size"
+    },
+    "cart": {
+        "title": "Your Cart",
+        "empty": "Your cart is empty",
+        "continueShopping": "Continue Shopping",
+        "summary": "Order Summary",
+        "subtotal": "Subtotal",
+        "taxes": "Taxes",
+        "total": "Total",
+        "checkout": "Proceed to Checkout",
+        "remove": "Remove item"
+    },
+    "checkout": {
+        "title": "Checkout",
+        "shippingInfo": "Shipping Information",
+        "paymentDetails": "Payment Details",
+        "orderSummary": "Order Summary",
+        "pay": "Pay"
+    },
+    "auth": {
+        "login": "Login",
+        "logout": "Log out",
+        "signup": "Sign up",
+        "welcomeBack": "Welcome Back",
+        "loginPrompt": "Enter your credentials to access your account",
+        "email": "Email",
+        "password": "Password",
+        "signIn": "Sign In",
+        "continueWith": "Or continue with",
+        "noAccount": "Don't have an account?",
+        "createAccount": "Create an Account",
+        "createAccountPrompt": "Join us and discover a world of elegance.",
+        "name": "Name",
+        "alreadyAccount": "Already have an account?"
+    }
+}

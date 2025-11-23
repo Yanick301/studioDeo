@@ -1,0 +1,60 @@
+{
+    "home": {
+        "heroTitle": "L'élégance dans chaque fil",
+        "heroSubtitle": "Découvrez des collections d'essentiels modernes. Une qualité sans compromis et un design intemporel, livrés à votre porte.",
+        "shopNow": "Acheter maintenant",
+        "shopByCategory": "Acheter par catégorie",
+        "featuredProducts": "Styles d'hiver tendance"
+    },
+    "header": {
+        "searchPlaceholder": "Rechercher des produits..."
+    },
+    "categories": {
+        "mens-clothing": "Vêtements pour hommes",
+        "womens-clothing": "Vêtements pour femmes",
+        "accessories": "Accessoires",
+        "winter-collection": "Collection d'hiver"
+    },
+    "product": {
+        "description": "Description",
+        "size": "Taille",
+        "addToCart": "Ajouter au panier",
+        "reviews": "Avis des clients",
+        "translate": "Traduire",
+        "oneSize": "Taille unique"
+    },
+    "cart": {
+        "title": "Votre panier",
+        "empty": "Votre panier est vide",
+        "continueShopping": "Continuer vos achats",
+        "summary": "Résumé de la commande",
+        "subtotal": "Sous-total",
+        "taxes": "Taxes",
+        "total": "Total",
+        "checkout": "Passer à la caisse",
+        "remove": "Retirer l'article"
+    },
+    "checkout": {
+        "title": "Caisse",
+        "shippingInfo": "Informations de livraison",
+        "paymentDetails": "Détails de paiement",
+        "orderSummary": "Résumé de la commande",
+        "pay": "Payer"
+    },
+    "auth": {
+        "login": "Connexion",
+        "logout": "Déconnexion",
+        "signup": "S'inscrire",
+        "welcomeBack": "Bon retour",
+        "loginPrompt": "Entrez vos identifiants pour accéder à votre compte",
+        "email": "E-mail",
+        "password": "Mot de passe",
+        "signIn": "Se connecter",
+        "continueWith": "Ou continuer avec",
+        "noAccount": "Vous n'avez pas de compte ?",
+        "createAccount": "Créer un compte",
+        "createAccountPrompt": "Rejoignez-nous et découvrez un monde d'élégance.",
+        "name": "Nom",
+        "alreadyAccount": "Vous avez déjà un compte ?"
+    }
+}

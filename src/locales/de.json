@@ -1,0 +1,61 @@
+{
+    "home": {
+      "heroTitle": "Eleganz in jedem Faden",
+      "heroSubtitle": "Entdecken Sie kuratierte Kollektionen moderner Essentials. Kompromisslose Qualität und zeitloses Design, direkt zu Ihnen nach Hause geliefert.",
+      "shopNow": "Jetzt einkaufen",
+      "shopByCategory": "Nach Kategorie einkaufen",
+      "featuredProducts": "Angesagte Winter-Styles"
+    },
+    "header": {
+      "searchPlaceholder": "Produkte suchen..."
+    },
+    "categories": {
+      "mens-clothing": "Herrenbekleidung",
+      "womens-clothing": "Damenbekleidung",
+      "accessories": "Accessoires",
+      "winter-collection": "Winterkollektion"
+    },
+    "product": {
+        "description": "Beschreibung",
+        "size": "Größe",
+        "addToCart": "In den Warenkorb",
+        "reviews": "Kundenrezensionen",
+        "translate": "Übersetzen",
+        "oneSize": "Einheitsgröße"
+    },
+    "cart": {
+        "title": "Ihr Warenkorb",
+        "empty": "Ihr Warenkorb ist leer",
+        "continueShopping": "Weiter einkaufen",
+        "summary": "Bestellübersicht",
+        "subtotal": "Zwischensumme",
+        "taxes": "Steuern",
+        "total": "Gesamt",
+        "checkout": "Zur Kasse gehen",
+        "remove": "Artikel entfernen"
+    },
+    "checkout": {
+        "title": "Kasse",
+        "shippingInfo": "Versandinformationen",
+        "paymentDetails": "Zahlungsdetails",
+        "orderSummary": "Bestellübersicht",
+        "pay": "Bezahlen"
+    },
+    "auth": {
+        "login": "Anmelden",
+        "logout": "Abmelden",
+        "signup": "Registrieren",
+        "welcomeBack": "Willkommen zurück",
+        "loginPrompt": "Geben Sie Ihre Anmeldeinformationen ein, um auf Ihr Konto zuzugreifen",
+        "email": "Email",
+        "password": "Passwort",
+        "signIn": "Anmelden",
+        "continueWith": "Oder weiter mit",
+        "noAccount": "Sie haben noch kein Konto?",
+        "createAccount": "Konto erstellen",
+        "createAccountPrompt": "Schließen Sie sich uns an und entdecken Sie eine Welt der Eleganz.",
+        "name": "Name",
+        "alreadyAccount": "Sie haben bereits ein Konto?"
+    }
+  }
+  

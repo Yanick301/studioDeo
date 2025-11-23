@@ -7,19 +7,26 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { AuthProvider } from '@/hooks/use-auth';
 import { FirebaseClientProvider } from '@/firebase';
+import { i18n, type Locale } from '@/i18n-config';
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 export const metadata: Metadata = {
   title: 'EZCENTIALS',
-  description: 'Luxury essentials, simplified.',
+  description: 'Luxus-Essentials, vereinfacht.',
 };
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale };
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={params.lang} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -32,7 +39,7 @@ export default function RootLayout({
         <FirebaseClientProvider>
           <AuthProvider>
             <CartProvider>
-              <Header />
+              <Header lang={params.lang} />
               <main className="flex-grow">{children}</main>
               <Footer />
               <Toaster />

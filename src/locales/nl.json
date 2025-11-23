@@ -1,0 +1,60 @@
+{
+    "home": {
+        "heroTitle": "Elegantie in elke draad",
+        "heroSubtitle": "Ontdek samengestelde collecties van moderne essentials. Compromisloze kwaliteit en tijdloos design, bij u thuisbezorgd.",
+        "shopNow": "Nu winkelen",
+        "shopByCategory": "Winkelen op categorie",
+        "featuredProducts": "Populaire winterstijlen"
+    },
+    "header": {
+        "searchPlaceholder": "Zoek producten..."
+    },
+    "categories": {
+        "mens-clothing": "Herenkleding",
+        "womens-clothing": "Dameskleding",
+        "accessories": "Accessoires",
+        "winter-collection": "Wintercollectie"
+    },
+    "product": {
+        "description": "Beschrijving",
+        "size": "Maat",
+        "addToCart": "Toevoegen aan winkelwagen",
+        "reviews": "Klantenreviews",
+        "translate": "Vertalen",
+        "oneSize": "One Size"
+    },
+    "cart": {
+        "title": "Uw winkelwagen",
+        "empty": "Uw winkelwagen is leeg",
+        "continueShopping": "Verder winkelen",
+        "summary": "Besteloverzicht",
+        "subtotal": "Subtotaal",
+        "taxes": "Belastingen",
+        "total": "Totaal",
+        "checkout": "Afrekenen",
+        "remove": "Artikel verwijderen"
+    },
+    "checkout": {
+        "title": "Afrekenen",
+        "shippingInfo": "Verzendinformatie",
+        "paymentDetails": "Betalingsdetails",
+        "orderSummary": "Besteloverzicht",
+        "pay": "Betalen"
+    },
+    "auth": {
+        "login": "Inloggen",
+        "logout": "Uitloggen",
+        "signup": "Aanmelden",
+        "welcomeBack": "Welkom terug",
+        "loginPrompt": "Voer uw gegevens in om toegang te krijgen tot uw account",
+        "email": "E-mail",
+        "password": "Wachtwoord",
+        "signIn": "Inloggen",
+        "continueWith": "Of ga verder met",
+        "noAccount": "Heeft u geen account?",
+        "createAccount": "Account aanmaken",
+        "createAccountPrompt": "Sluit u aan en ontdek een wereld van elegantie.",
+        "name": "Naam",
+        "alreadyAccount": "Heeft u al een account?"
+    }
+}

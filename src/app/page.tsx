@@ -14,8 +14,11 @@ import { ArrowRight } from 'lucide-react';
 import ProductCard from '@/components/products/product-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import BrandMarquee from '@/components/home/brand-marquee';
+import { getDictionary } from '@/get-dictionary';
+import { Locale } from '@/i18n-config';
 
-export default function Home() {
+export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(lang);
   const featuredProducts = products.filter(p => p.categoryId === '4').slice(0, 4);
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-1');
 
@@ -38,13 +41,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 p-4 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-extrabold tracking-tight">
-              Elegance in Every Thread
+              {dictionary.home.heroTitle}
             </h1>
             <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
-              Discover curated collections of modern essentials. Uncompromising quality and timeless design, delivered to your door.
+              {dictionary.home.heroSubtitle}
             </p>
             <Button asChild size="lg" className="mt-8 font-bold">
-              <Link href="/category/all">Shop Now <ArrowRight className="ml-2" /></Link>
+              <Link href={`/${lang}/category/all`}>{dictionary.home.shopNow} <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </section>
@@ -52,7 +55,7 @@ export default function Home() {
         {/* Categories Section */}
         <section className="py-12 md:py-20 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">Shop by Category</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">{dictionary.home.shopByCategory}</h2>
             <Carousel
               opts={{
                 align: 'start',
@@ -66,13 +69,13 @@ export default function Home() {
                   return (
                     <CarouselItem key={category.id} className="md:basis-1/2 lg:basis-1/4">
                       <div className="p-1">
-                        <Link href={`/category/${category.slug}`}>
+                        <Link href={`/${lang}/category/${category.slug}`}>
                           <Card className="overflow-hidden group">
                             <CardContent className="p-0 relative aspect-[4/3]">
                               {categoryImage && (
                                 <Image
                                   src={categoryImage.imageUrl}
-                                  alt={category.name}
+                                  alt={dictionary.categories[category.slug as keyof typeof dictionary.categories]}
                                   fill
                                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                                   data-ai-hint={categoryImage.imageHint}
@@ -80,7 +83,7 @@ export default function Home() {
                               )}
                               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
                               <div className="absolute inset-0 flex items-center justify-center">
-                                <h3 className="text-2xl font-headline font-bold text-white">{category.name}</h3>
+                                <h3 className="text-2xl font-headline font-bold text-white">{dictionary.categories[category.slug as keyof typeof dictionary.categories]}</h3>
                               </div>
                             </CardContent>
                           </Card>
@@ -99,10 +102,10 @@ export default function Home() {
         {/* Featured Products Section */}
         <section className="py-12 md:py-20 bg-secondary">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">Trending Winter Styles</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">{dictionary.home.featuredProducts}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {featuredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product} lang={lang} />
               ))}
             </div>
           </div>

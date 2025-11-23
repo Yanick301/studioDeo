@@ -8,12 +8,14 @@ import { useCart } from '@/hooks/use-cart';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Locale } from '@/i18n-config';
 
 interface CartItemProps {
   item: CartItemType;
+  lang: Locale;
 }
 
-export default function CartItem({ item }: CartItemProps) {
+export default function CartItem({ item, lang }: CartItemProps) {
   const { updateItemQuantity, removeItem } = useCart();
   const productImage = PlaceHolderImages.find(p => p.id === item.imageId);
 
@@ -37,10 +39,10 @@ export default function CartItem({ item }: CartItemProps) {
       <div className="flex-1">
         <div className="flex justify-between">
           <div>
-            <Link href={`/product/${item.slug}`} className="font-medium hover:underline">
+            <Link href={`/${lang}/product/${item.slug}`} className="font-medium hover:underline">
               {item.name}
             </Link>
-            <p className="text-sm text-muted-foreground">Size: {item.size}</p>
+            <p className="text-sm text-muted-foreground">Größe: {item.size}</p>
             <p className="text-sm font-medium">${item.price.toFixed(2)}</p>
           </div>
           <Button
@@ -50,7 +52,7 @@ export default function CartItem({ item }: CartItemProps) {
             onClick={() => removeItem(item.id, item.size)}
           >
             <X size={16} />
-            <span className="sr-only">Remove item</span>
+            <span className="sr-only">Artikel entfernen</span>
           </Button>
         </div>
         <div className="mt-2 flex items-center">

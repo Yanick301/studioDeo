@@ -5,8 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger } from '@/components/ui/sheet';
 import CartSheet from './cart-sheet';
 import { useCart } from '@/hooks/use-cart';
+import { Locale } from '@/i18n-config';
 
-export default function CartIcon() {
+export default function CartIcon({ lang }: { lang: Locale }) {
   const { cartCount } = useCart();
   
   return (
@@ -19,10 +20,10 @@ export default function CartIcon() {
               {cartCount}
             </span>
           )}
-          <span className="sr-only">Shopping Cart</span>
+          <span className="sr-only">Warenkorb</span>
         </Button>
       </SheetTrigger>
-      <CartSheet />
+      <CartSheet lang={lang} />
     </Sheet>
   );
 }

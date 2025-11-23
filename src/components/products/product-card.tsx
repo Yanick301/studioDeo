@@ -3,16 +3,18 @@ import Link from 'next/link';
 import type { Product } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Locale } from '@/i18n-config';
 
 interface ProductCardProps {
   product: Product;
+  lang: Locale;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, lang }: ProductCardProps) {
   const productImage = PlaceHolderImages.find(p => p.id === product.imageId);
 
   return (
-    <Link href={`/product/${product.slug}`}>
+    <Link href={`/${lang}/product/${product.slug}`}>
       <Card className="overflow-hidden h-full flex flex-col group transition-shadow duration-300 hover:shadow-xl">
         <CardHeader className="p-0">
           <div className="relative aspect-[3/4] w-full overflow-hidden">
