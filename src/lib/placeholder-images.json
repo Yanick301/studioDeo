@@ -1,3 +1,134 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "Stylish person looking out over a city",
+      "imageUrl": "https://images.unsplash.com/photo-1676914333302-53615f404416?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYXNoaW9uJTIwY2l0eXxlbnwwfHx8fDE3NjM4OTUxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion city"
+    },
+    {
+      "id": "cat-mens",
+      "description": "Man wearing a modern outfit",
+      "imageUrl": "https://images.unsplash.com/photo-1552168212-9ceb61083ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtZW5zJTIwZmFzaGlvbnxlbnwwfHx8fDE3NjM4MTgzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mens fashion"
+    },
+    {
+      "id": "cat-womens",
+      "description": "Woman in an elegant dress",
+      "imageUrl": "https://images.unsplash.com/photo-1634926938182-f6f6ad286640?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21lbnMlMjBmYXNoaW9ufGVufDB8fHx8MTc2Mzg4NDgyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "womens fashion"
+    },
+    {
+      "id": "cat-accessories",
+      "description": "Close up of a watch and a bracelet",
+      "imageUrl": "https://images.unsplash.com/photo-1589363463135-e811e08d8ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYXNoaW9uJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzYzODk1MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion accessories"
+    },
+    {
+      "id": "cat-winter",
+      "description": "Person wearing a warm winter coat in a snowy environment",
+      "imageUrl": "https://images.unsplash.com/photo-1636096625948-c1235f1b2e9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aW50ZXIlMjBjbG90aGluZ3xlbnwwfHx8fDE3NjM3OTQ1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "winter clothing"
+    },
+    {
+      "id": "prod-1",
+      "imageUrl": "https://images.unsplash.com/photo-1589234217365-08d3e0e5cf42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVuJTIwc2hpcnR8ZW58MHx8fHwxNzYzODY3MjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men shirt"
+    },
+    {
+      "id": "prod-2",
+      "imageUrl": "https://images.unsplash.com/photo-1678222532251-2f303290c1e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtZW4lMjBwYW50c3xlbnwwfHx8fDE3NjM4OTUxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men pants"
+    },
+    {
+      "id": "prod-3",
+      "imageUrl": "https://images.unsplash.com/photo-1668069226492-508742b03147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBzaG9lc3xlbnwwfHx8fDE3NjM4NDI3OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men shoes"
+    },
+    {
+      "id": "prod-4",
+      "imageUrl": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21lbiUyMGRyZXNzfGVufDB8fHx8MTc2Mzg5NTEyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-5",
+      "imageUrl": "https://images.unsplash.com/photo-1700738732802-c00e742434d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21lbiUyMGJsb3VzZXxlbnwwfHx8fDE3NjM4OTUxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women blouse"
+    },
+    {
+      "id": "prod-6",
+      "imageUrl": "https://images.unsplash.com/photo-1606241853208-e8be190ac116?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21lbiUyMHNraXJ0fGVufDB8fHx8MTc2Mzg5NTEyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women skirt"
+    },
+    {
+      "id": "prod-7",
+      "imageUrl": "https://images.unsplash.com/photo-1598463370698-bba402980d47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsZWF0aGVyJTIwd2F0Y2h8ZW58MHx8fHwxNzYzODk1MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather watch"
+    },
+    {
+      "id": "prod-8",
+      "imageUrl": "https://images.unsplash.com/photo-1608539733292-190446b22b83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdW5nbGFzc2VzfGVufDB8fHx8MTc2Mzg3MTU1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunglasses"
+    },
+    {
+      "id": "prod-9",
+      "imageUrl": "https://images.unsplash.com/photo-1647540945262-7da3bd1a3d96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsZWF0aGVyJTIwYmFnfGVufDB8fHx8MTc2MzgxNDI1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather bag"
+    },
+    {
+      "id": "prod-10",
+      "imageUrl": "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3aW50ZXIlMjBqYWNrZXR8ZW58MHx8fHwxNzYzODMwMDg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "winter jacket"
+    },
+    {
+      "id": "prod-11",
+      "imageUrl": "https://images.unsplash.com/photo-1711097258176-c1a4bb511aa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b29sJTIwc2NhcmZ8ZW58MHx8fHwxNzYzODM1NzA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wool scarf"
+    },
+    {
+      "id": "prod-12",
+      "imageUrl": "https://images.unsplash.com/photo-1630691650107-53dd500d2907?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxiZWFuaWUlMjBoYXR8ZW58MHx8fHwxNzYzODgyNjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beanie hat"
+    },
+    {
+      "id": "prod-gallery-1-1",
+      "imageUrl": "https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBzaGlydHxlbnwwfHx8fDE3NjM4NjcyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men shirt"
+    },
+    {
+      "id": "prod-gallery-1-2",
+      "imageUrl": "https://images.unsplash.com/photo-1696254790588-f22848a48b9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaGlydCUyMGRldGFpbHxlbnwwfHx8fDE3NjM4MjE4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "shirt detail"
+    },
+    {
+      "id": "prod-gallery-1-3",
+      "imageUrl": "https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzg2OTMyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fabric texture"
+    },
+    {
+      "id": "avatar-1",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "avatar-2",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "avatar-3",
+      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzODQwMDk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "avatar-4",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "avatar-5",
+      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzODQwMDk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    }
+  ]
 }
