@@ -16,8 +16,10 @@ import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/use-auth';
-import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
+import { initiateEmailSignIn } from '@/firebase';
+import { useFirebase } from '@/firebase';
+import { useRouter } from 'next/navigation';
 
 const loginSchema = z.object({
   email: z.string().email(),
@@ -37,9 +39,10 @@ const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 export default function LoginPage() {
-  const { login } = useAuth();
-  const router = useRouter();
+  const { loginWithGoogle } = useAuth();
+  const { auth } = useFirebase();
   const { toast } = useToast();
+  const router = useRouter();
 
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -47,24 +50,13 @@ export default function LoginPage() {
   });
 
   const onSubmit = (data: LoginFormValues) => {
-    // Mock login
-    login({ name: data.email.split('@')[0], email: data.email });
+    initiateEmailSignIn(auth, data.email, data.password);
     toast({
-        title: "Login Successful",
-        description: "Welcome back!",
+        title: "Login Attempted",
+        description: "Check your email for a confirmation link if this is your first time.",
     });
     router.push('/');
   };
-
-  const handleGoogleLogin = () => {
-    // Mock Google login
-    login({ name: 'Jane Doe', email: 'jane.doe@example.com' });
-    toast({
-        title: "Login Successful",
-        description: "Welcome back, Jane!",
-    });
-    router.push('/');
-  }
 
   return (
     <div className="container flex items-center justify-center py-12 md:py-24">
@@ -103,7 +95,7 @@ export default function LoginPage() {
               </span>
             </div>
           </div>
-          <Button variant="outline" className="w-full" onClick={handleGoogleLogin}>
+          <Button variant="outline" className="w-full" onClick={loginWithGoogle}>
             <GoogleIcon className="mr-2 h-4 w-4" />
             Google
           </Button>

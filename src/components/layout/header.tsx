@@ -18,7 +18,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useAuth } from '@/hooks/use-auth';
 import { categories } from '@/lib/data';
@@ -27,6 +27,7 @@ import Logo from './logo';
 import { Input } from '../ui/input';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Skeleton } from '../ui/skeleton';
 
 const mainNav = categories.map((category) => ({
   href: `/category/${category.slug}`,
@@ -35,7 +36,7 @@ const mainNav = categories.map((category) => ({
 
 export default function Header() {
   const isMobile = useIsMobile();
-  const { isAuthenticated, user, logout } = useAuth();
+  const { isAuthenticated, user, logout, isUserLoading } = useAuth();
   const [showSearch, setShowSearch] = useState(false);
   const router = useRouter();
 
@@ -51,22 +52,27 @@ export default function Header() {
   };
 
   const AuthButton = () => {
-    if (isAuthenticated) {
+    if (isUserLoading) {
+      return <Skeleton className="h-8 w-8 rounded-full" />;
+    }
+
+    if (isAuthenticated && user) {
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-8 w-8 rounded-full">
               <Avatar className="h-8 w-8">
-                <AvatarFallback>{user?.name?.[0].toUpperCase()}</AvatarFallback>
+                {user.photoURL && <AvatarImage src={user.photoURL} alt={user.displayName || 'User'} />}
+                <AvatarFallback>{user.displayName?.[0].toUpperCase() || user.email?.[0].toUpperCase()}</AvatarFallback>
               </Avatar>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56" align="end" forceMount>
             <DropdownMenuLabel className="font-normal">
               <div className="flex flex-col space-y-1">
-                <p className="text-sm font-medium leading-none">{user?.name}</p>
+                <p className="text-sm font-medium leading-none">{user.displayName}</p>
                 <p className="text-xs leading-none text-muted-foreground">
-                  {user?.email}
+                  {user.email}
                 </p>
               </div>
             </DropdownMenuLabel>

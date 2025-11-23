@@ -285,7 +285,8 @@
   "auth": {
     "providers": [
       "password",
-      "anonymous"
+      "anonymous",
+      "google.com"
     ]
   },
   "firestore": {
@@ -422,3 +423,5 @@
     "reasoning": "This Firestore structure is designed to support the EZCENTIALS e-commerce platform, emphasizing security, scalability, and maintainability. The design adheres to the principles of Authorization Independence, Structural Segregation, Access Modeling, and Data Clarity. Specifically, it uses path-based ownership for user-related data and denormalization where necessary to avoid `get()` calls in security rules.\n\n**Authorization Independence:** Authorization is based on path ownership (e.g., `/users/{userId}/cartItems/{cartItemId}`) and avoids hierarchical dependencies. This allows for atomic operations and easier debugging.\n\n**Structural Segregation:** Data with different security requirements are stored in separate collections. User profiles and cart items are stored under the `/users/{userId}` path, providing clear ownership. Products and Categories, accessible to all users, are stored at the root level.\n\n**QAPs Support:**\n*   **Secure List Operations:**  The structure allows for secure `list` operations. For example, listing cart items is restricted to the owning user by querying `/users/{userId}/cartItems`. Similarly, listing products or categories does not require authentication.\n\n**Invariants:** The structure supports invariants such as ownership (e.g., only the user can modify their cart) and data integrity (e.g., order items are linked to a specific order and product).\n\n**Denormalization Strategy:** While direct denormalization is minimal in this design (given the path-based ownership approach), consider denormalizing product details (name, price) into `CartItem` and `OrderItem` to avoid reads during cart display and order processing. This would involve adding `productName` and `productPrice` to the `CartItem` and `OrderItem` schemas, ensuring display information is readily available without additional lookups. This optimization enhances read performance and maintains data consistency. However, this denormalization is not represented in the entities, but should be kept in mind when implementing the backend."
   }
 }
+
+    

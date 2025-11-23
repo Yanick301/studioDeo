@@ -16,8 +16,11 @@ import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/use-auth';
-import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
+import { initiateEmailSignUp } from '@/firebase/non-blocking-login';
+import { useFirebase } from '@/firebase';
+import { useRouter } from 'next/navigation';
+
 
 const signupSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -37,9 +40,11 @@ const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => (
   );
 
 export default function SignupPage() {
-  const { login } = useAuth();
-  const router = useRouter();
+  const { loginWithGoogle } = useAuth();
+  const { auth } = useFirebase();
   const { toast } = useToast();
+  const router = useRouter();
+
 
   const form = useForm<SignupFormValues>({
     resolver: zodResolver(signupSchema),
@@ -47,24 +52,14 @@ export default function SignupPage() {
   });
 
   const onSubmit = (data: SignupFormValues) => {
-    // Mock signup and login
-    login({ name: data.name, email: data.email });
+    initiateEmailSignUp(auth, data.email, data.password);
     toast({
-        title: "Account Created",
-        description: "Welcome to EZCENTIALS!",
+        title: "Account Creation Attempted",
+        description: "Check your email for a confirmation link.",
     });
     router.push('/');
   };
 
-  const handleGoogleLogin = () => {
-    // Mock Google login
-    login({ name: 'Jane Doe', email: 'jane.doe@example.com' });
-    toast({
-        title: "Login Successful",
-        description: "Welcome back, Jane!",
-    });
-    router.push('/');
-  }
 
   return (
     <div className="container flex items-center justify-center py-12 md:py-24">
@@ -110,7 +105,7 @@ export default function SignupPage() {
               </span>
             </div>
           </div>
-          <Button variant="outline" className="w-full" onClick={handleGoogleLogin}>
+          <Button variant="outline" className="w-full" onClick={loginWithGoogle}>
             <GoogleIcon className="mr-2 h-4 w-4" />
             Google
           </Button>
