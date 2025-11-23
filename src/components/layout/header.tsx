@@ -45,9 +45,9 @@ export default function Header() {
     const formData = new FormData(e.currentTarget);
     const query = formData.get('search') as string;
     if (query) {
-      // In a real app, you'd navigate to a search results page
-      console.log(`Searching for: ${query}`);
+      router.push(`/search?q=${encodeURIComponent(query)}`);
       setShowSearch(false);
+      (e.target as HTMLFormElement).reset();
     }
   };
 
@@ -161,7 +161,7 @@ export default function Header() {
                 {showSearch && (
                     <div className="absolute top-full right-0 mt-2 w-64">
                          <form onSubmit={handleSearch} className="relative">
-                            <Input name="search" placeholder="Search products..." className="w-full" />
+                            <Input name="search" placeholder="Search products..." className="w-full" autoFocus />
                          </form>
                     </div>
                 )}
