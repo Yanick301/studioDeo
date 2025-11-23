@@ -13,14 +13,16 @@ import { categories, products } from '@/lib/data';
 import { ArrowRight } from 'lucide-react';
 import ProductCard from '@/components/products/product-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import BrandMarquee from '@/components/home/brand-marquee';
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 4);
+  const featuredProducts = products.filter(p => p.categoryId === '4').slice(0, 4);
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-1');
 
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
+        <BrandMarquee />
         {/* Hero Section */}
         <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
           {heroImage && (
@@ -97,7 +99,7 @@ export default function Home() {
         {/* Featured Products Section */}
         <section className="py-12 md:py-20 bg-secondary">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">Featured Products</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-10">Trending Winter Styles</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {featuredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />

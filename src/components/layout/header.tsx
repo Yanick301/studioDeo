@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, ShoppingBag, User, LogIn, LogOut } from 'lucide-react';
+import { Menu, Search, LogIn, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -18,12 +18,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useAuth } from '@/hooks/use-auth';
 import { categories } from '@/lib/data';
 import CartIcon from '@/components/cart/cart-icon';
 import Logo from './logo';
+import { Input } from '../ui/input';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const mainNav = categories.map((category) => ({
   href: `/category/${category.slug}`,
@@ -33,6 +36,19 @@ const mainNav = categories.map((category) => ({
 export default function Header() {
   const isMobile = useIsMobile();
   const { isAuthenticated, user, logout } = useAuth();
+  const [showSearch, setShowSearch] = useState(false);
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const query = formData.get('search') as string;
+    if (query) {
+      // In a real app, you'd navigate to a search results page
+      console.log(`Searching for: ${query}`);
+      setShowSearch(false);
+    }
+  };
 
   const AuthButton = () => {
     if (isAuthenticated) {
@@ -131,6 +147,19 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center space-x-2">
+            <div className="relative">
+                <Button variant="ghost" size="icon" onClick={() => setShowSearch(!showSearch)}>
+                    <Search />
+                    <span className="sr-only">Search</span>
+                </Button>
+                {showSearch && (
+                    <div className="absolute top-full right-0 mt-2 w-64">
+                         <form onSubmit={handleSearch} className="relative">
+                            <Input name="search" placeholder="Search products..." className="w-full" />
+                         </form>
+                    </div>
+                )}
+            </div>
           <CartIcon />
           <AuthButton />
         </div>

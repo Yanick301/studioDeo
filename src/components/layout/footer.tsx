@@ -1,6 +1,14 @@
 import Link from 'next/link';
-import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { Twitter, Instagram } from 'lucide-react';
 import Logo from './logo';
+
+const SnapchatIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M12 4.1c-2.9 0-5.3 1.9-5.3 4.2 0 1.2.6 2.3 1.5 3.1-.3 1.2-.6 2.5-.6 2.5s2.3.9 3.8 0c.3 0 .6.1.9.1 2.9 0 5.3-1.9 5.3-4.2S14.9 4.1 12 4.1z" />
+        <path d="M17.1 15.3c-.3 1.3-1.3 2.5-2.8 2.9-1.3.4-2.8.2-4.1-.6-.2-.1-.5-.2-.7-.2-.2 0-.4.1-.6.2-1.4.8-2.9.9-4.1.6-1.5-.4-2.5-1.6-2.8-2.9-.3-1.5.2-3.1 1.4-4.3 1.1-1.1 2.7-1.7 4.3-1.4.2 0 .4 0 .6-.1s.3-.2.4-.4c.7-1.1 2-1.7 3.4-1.7s2.7.6 3.4 1.7c.1.2.2.3.4.4s.4.1.6.1c1.6-.3 3.2.3 4.3 1.4 1.2 1.2 1.7 2.8 1.4 4.3z" />
+    </svg>
+);
+
 
 export default function Footer() {
   const footerLinks = [
@@ -37,7 +45,7 @@ export default function Footer() {
           <div className="flex space-x-4 mt-4 sm:mt-0">
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter size={20} /></Link>
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram size={20} /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook size={20} /></Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors"><SnapchatIcon className="h-5 w-5" /></Link>
           </div>
         </div>
       </div>
