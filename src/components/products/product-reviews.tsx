@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Review } from "@/lib/types"
 import { Star } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
+import { useDictionary } from "@/hooks/use-dictionary"
 
 interface ProductReviewsProps {
   reviews: Review[];
@@ -21,10 +22,14 @@ const StarRating = ({ rating }: { rating: number }) => (
 
 
 export default function ProductReviews({ reviews }: ProductReviewsProps) {
+  const dictionary = useDictionary();
+
+  if (!dictionary) return null;
+  
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="font-headline text-2xl">Customer Reviews</CardTitle>
+        <CardTitle className="font-headline text-2xl">{dictionary.product.reviews}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         {reviews.map((review) => {

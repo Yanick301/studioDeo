@@ -1,6 +1,10 @@
+'use client';
+
 import Link from 'next/link';
 import { Twitter, Instagram } from 'lucide-react';
 import Logo from './logo';
+import { useDictionary } from '@/hooks/use-dictionary';
+import { Locale } from '@/i18n-config';
 
 const SnapchatIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -10,26 +14,30 @@ const SnapchatIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 
-export default function Footer() {
-  const footerLinks = [
-    { title: 'Shop', links: [{ href: '/category/mens-clothing', label: "Men's" }, { href: '/category/womens-clothing', label: "Women's" }, { href: '/category/accessories', label: 'Accessories' }] },
+export default function Footer({ lang }: { lang: Locale }) {
+  const dictionary = useDictionary();
+  
+  const footerLinks = dictionary ? [
+    { title: 'Shop', links: [{ href: `/${lang}/category/mens-clothing`, label: dictionary.categories['mens-clothing'] }, { href: `/${lang}/category/womens-clothing`, label: dictionary.categories['womens-clothing'] }, { href: `/${lang}/category/accessories`, label: dictionary.categories.accessories }] },
     { title: 'About', links: [{ href: '#', label: 'Our Story' }, { href: '#', label: 'Careers' }, { href: '#', label: 'Press' }] },
     { title: 'Support', links: [{ href: '#', label: 'Contact Us' }, { href: '#', label: 'FAQ' }, { href: '#', label: 'Shipping & Returns' }] },
-  ];
+  ] : [];
+
+  if (!dictionary) return null;
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-1">
-            <Logo />
+            <Logo lang={lang} />
             <p className="mt-4 text-sm text-muted-foreground">Elegance in every thread.</p>
           </div>
           {footerLinks.map(section => (
             <div key={section.title}>
               <h3 className="font-headline font-semibold tracking-wider uppercase">{section.title}</h3>
               <ul className="mt-4 space-y-2">
-                {section.links.map(link => (
+                {section.links.map(link => link.label && (
                   <li key={link.label}>
                     <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {link.label}

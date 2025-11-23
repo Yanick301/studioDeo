@@ -17,82 +17,77 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import Link from 'next/link';
 import { useAuth } from '@/hooks/use-auth';
 import { useToast } from '@/hooks/use-toast';
-import { initiateEmailSignUp } from '@/firebase/non-blocking-login';
+import { initiateEmailSignIn } from '@/firebase';
 import { useFirebase } from '@/firebase';
 import { useRouter } from 'next/navigation';
+import { useDictionary } from '@/hooks/use-dictionary';
+import { Locale } from '@/i18n-config';
 
-
-const signupSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
+const loginSchema = z.object({
   email: z.string().email(),
   password: z.string().min(8, 'Password must be at least 8 characters'),
 });
 
-type SignupFormValues = z.infer<typeof signupSchema>;
+type LoginFormValues = z.infer<typeof loginSchema>;
 
 const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg role="img" viewBox="0 0 24 24" {...props}>
-      <path
-        fill="currentColor"
-        d="M12.48 10.92v3.28h7.84c-.24 1.84-.85 3.18-1.73 4.1-1.05 1.05-2.36 1.67-4.05 1.67-3.27 0-5.93-2.66-5.93-5.93s2.66-5.93 5.93-5.93c1.75 0 3.05.62 4.02 1.59l2.48-2.48C18.43 2.12 15.82 1 12.48 1 7.18 1 3.09 4.85 3.09 10.08s4.09 9.08 9.39 9.08c2.83 0 5.23-1.02 6.94-2.72 1.78-1.74 2.37-4.14 2.37-6.55 0-.64-.06-1.28-.18-1.9z"
-      ></path>
-    </svg>
-  );
+  <svg role="img" viewBox="0 0 24 24" {...props}>
+    <path
+      fill="currentColor"
+      d="M12.48 10.92v3.28h7.84c-.24 1.84-.85 3.18-1.73 4.1-1.05 1.05-2.36 1.67-4.05 1.67-3.27 0-5.93-2.66-5.93-5.93s2.66-5.93 5.93-5.93c1.75 0 3.05.62 4.02 1.59l2.48-2.48C18.43 2.12 15.82 1 12.48 1 7.18 1 3.09 4.85 3.09 10.08s4.09 9.08 9.39 9.08c2.83 0 5.23-1.02 6.94-2.72 1.78-1.74 2.37-4.14 2.37-6.55 0-.64-.06-1.28-.18-1.9z"
+    ></path>
+  </svg>
+);
 
-export default function SignupPage() {
+
+export default function LoginPage({ params: { lang } }: { params: { lang: Locale } }) {
   const { loginWithGoogle } = useAuth();
   const { auth } = useFirebase();
   const { toast } = useToast();
   const router = useRouter();
+  const dictionary = useDictionary();
 
-
-  const form = useForm<SignupFormValues>({
-    resolver: zodResolver(signupSchema),
-    defaultValues: { name: '', email: '', password: '' },
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: { email: '', password: '' },
   });
 
-  const onSubmit = (data: SignupFormValues) => {
-    initiateEmailSignUp(auth, data.email, data.password);
+  const onSubmit = (data: LoginFormValues) => {
+    initiateEmailSignIn(auth, data.email, data.password);
     toast({
-        title: "Account Creation Attempted",
-        description: "Check your email for a confirmation link.",
+        title: "Login Attempted",
+        description: "Check your email for a confirmation link if this is your first time.",
     });
-    router.push('/');
+    router.push(`/${lang}/`);
   };
 
+  if (!dictionary) return null;
 
   return (
     <div className="container flex items-center justify-center py-12 md:py-24">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-headline">Create an Account</CardTitle>
-          <CardDescription>Join us and discover a world of elegance.</CardDescription>
+          <CardTitle className="text-2xl font-headline">{dictionary.auth.welcomeBack}</CardTitle>
+          <CardDescription>{dictionary.auth.loginPrompt}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <FormField control={form.control} name="name" render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl><Input placeholder="Jane Doe" {...field} /></FormControl>
-                        <FormMessage />
-                    </FormItem>
-                )} />
                <FormField control={form.control} name="email" render={({ field }) => (
                     <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>{dictionary.auth.email}</FormLabel>
                         <FormControl><Input type="email" placeholder="m@example.com" {...field} /></FormControl>
                         <FormMessage />
                     </FormItem>
                 )} />
                 <FormField control={form.control} name="password" render={({ field }) => (
                     <FormItem>
-                        <FormLabel>Password</FormLabel>
+                        <FormLabel>{dictionary.auth.password}</FormLabel>
                         <FormControl><Input type="password" {...field} /></FormControl>
                         <FormMessage />
                     </FormItem>
                 )} />
-              <Button type="submit" className="w-full">Create Account</Button>
+              <Button type="submit" className="w-full">{dictionary.auth.signIn}</Button>
             </form>
           </Form>
           <div className="relative">
@@ -101,7 +96,7 @@ export default function SignupPage() {
             </div>
             <div className="relative flex justify-center text-xs uppercase">
               <span className="bg-background px-2 text-muted-foreground">
-                Or continue with
+                {dictionary.auth.continueWith}
               </span>
             </div>
           </div>
@@ -111,7 +106,7 @@ export default function SignupPage() {
           </Button>
         </CardContent>
         <CardFooter className="text-sm justify-center">
-          <p>Already have an account? <Link href="/login" className="font-semibold underline">Sign in</Link></p>
+          <p>{dictionary.auth.noAccount} <Link href={`/${lang}/signup`} className="font-semibold underline">{dictionary.auth.signup}</Link></p>
         </CardFooter>
       </Card>
     </div>

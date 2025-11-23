@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '../globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import { CartProvider } from '@/hooks/use-cart';
@@ -8,6 +8,8 @@ import Footer from '@/components/layout/footer';
 import { AuthProvider } from '@/hooks/use-auth';
 import { FirebaseClientProvider } from '@/firebase';
 import { i18n, type Locale } from '@/i18n-config';
+import { getDictionary } from '@/get-dictionary';
+import { DictionaryProvider } from '@/context/dicionary-provider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -18,13 +20,14 @@ export const metadata: Metadata = {
   description: 'Luxus-Essentials, vereinfacht.',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
   params: { lang: Locale };
 }>) {
+  const dictionary = await getDictionary(params.lang);
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <head>
@@ -39,10 +42,12 @@ export default function RootLayout({
         <FirebaseClientProvider>
           <AuthProvider>
             <CartProvider>
-              <Header lang={params.lang} />
-              <main className="flex-grow">{children}</main>
-              <Footer />
-              <Toaster />
+              <DictionaryProvider dictionary={dictionary}>
+                <Header lang={params.lang} />
+                <main className="flex-grow">{children}</main>
+                <Footer lang={params.lang} />
+                <Toaster />
+              </DictionaryProvider>
             </CartProvider>
           </AuthProvider>
         </FirebaseClientProvider>

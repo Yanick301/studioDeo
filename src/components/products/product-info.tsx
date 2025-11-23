@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Star, Languages } from 'lucide-react';
 import LanguageSelector from './language-selector';
+import { useDictionary } from '@/hooks/use-dictionary';
 
 interface ProductInfoProps {
   product: Product;
@@ -18,6 +19,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
   const { addItem } = useCart();
   const [selectedSize, setSelectedSize] = useState<string | null>(product.sizes.length > 0 ? product.sizes[0] : null);
   const [showTranslator, setShowTranslator] = useState(false);
+  const dictionary = useDictionary();
 
   const handleAddToCart = () => {
     if (product.sizes.length > 0 && !selectedSize) {
@@ -34,6 +36,8 @@ export default function ProductInfo({ product }: ProductInfoProps) {
     }, 1);
   };
   
+  if (!dictionary) return null;
+
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-3xl lg:text-4xl font-headline font-bold">{product.name}</h1>
@@ -50,10 +54,10 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
       <div>
         <div className="flex justify-between items-center mb-2">
-            <h3 className="text-lg font-semibold">Description</h3>
+            <h3 className="text-lg font-semibold">{dictionary.product.description}</h3>
             <Button variant="ghost" size="sm" onClick={() => setShowTranslator(!showTranslator)}>
                 <Languages className="mr-2 h-4 w-4" />
-                Translate
+                {dictionary.product.translate}
             </Button>
         </div>
         <LanguageSelector originalText={product.description} isVisible={showTranslator} />
@@ -61,7 +65,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
       {product.sizes.length > 0 && product.sizes[0] !== 'One Size' && (
         <div>
-          <h3 className="text-sm font-medium mb-2">Size</h3>
+          <h3 className="text-sm font-medium mb-2">{dictionary.product.size}</h3>
           <RadioGroup
             value={selectedSize || ''}
             onValueChange={setSelectedSize}
@@ -83,7 +87,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       )}
 
       <Button onClick={handleAddToCart} size="lg" className="mt-4">
-        Add to Cart
+        {dictionary.product.addToCart}
       </Button>
     </div>
   );

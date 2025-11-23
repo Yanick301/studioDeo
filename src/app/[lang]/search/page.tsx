@@ -5,8 +5,9 @@ import { useSearchParams } from 'next/navigation';
 import { products as allProducts } from '@/lib/data';
 import ProductCard from '@/components/products/product-card';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Locale } from '@/i18n-config';
 
-function SearchResults() {
+function SearchResults({ lang }: { lang: Locale }) {
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
 
@@ -24,7 +25,7 @@ function SearchResults() {
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} lang={lang} />
           ))}
         </div>
       ) : (
@@ -39,10 +40,10 @@ function SearchResults() {
 }
 
 
-export default function SearchPage() {
+export default function SearchPage({ params: { lang } }: { params: { lang: Locale } }) {
     return (
         <Suspense fallback={<SearchSkeleton />}>
-            <SearchResults />
+            <SearchResults lang={lang} />
         </Suspense>
     )
 }

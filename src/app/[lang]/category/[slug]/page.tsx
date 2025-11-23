@@ -12,10 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Locale } from '@/i18n-config';
 
 type SortOption = 'latest' | 'price-asc' | 'price-desc' | 'popularity';
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage({ params }: { params: { slug: string, lang: Locale } }) {
   const [sortOption, setSortOption] = useState<SortOption>('latest');
 
   const category = categories.find((c) => c.slug === params.slug);
@@ -71,7 +72,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       {sortedProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {sortedProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} lang={params.lang} />
           ))}
         </div>
       ) : (

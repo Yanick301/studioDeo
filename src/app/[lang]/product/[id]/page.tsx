@@ -3,8 +3,9 @@ import { products, reviews as allReviews } from '@/lib/data';
 import ProductGallery from '@/components/products/product-gallery';
 import ProductInfo from '@/components/products/product-info';
 import ProductReviews from '@/components/products/product-reviews';
+import { Locale } from '@/i18n-config';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default async function ProductPage({ params }: { params: { id: string, lang: Locale } }) {
   const product = products.find((p) => p.slug === params.id);
 
   if (!product) {

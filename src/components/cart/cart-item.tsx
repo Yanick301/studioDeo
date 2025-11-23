@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Locale } from '@/i18n-config';
+import { useDictionary } from '@/hooks/use-dictionary';
 
 interface CartItemProps {
   item: CartItemType;
@@ -17,11 +18,14 @@ interface CartItemProps {
 
 export default function CartItem({ item, lang }: CartItemProps) {
   const { updateItemQuantity, removeItem } = useCart();
+  const dictionary = useDictionary();
   const productImage = PlaceHolderImages.find(p => p.id === item.imageId);
 
   const handleQuantityChange = (newQuantity: number) => {
     updateItemQuantity(item.id, item.size, newQuantity);
   };
+
+  if (!dictionary) return null;
 
   return (
     <div className="flex items-start gap-4">
@@ -42,7 +46,7 @@ export default function CartItem({ item, lang }: CartItemProps) {
             <Link href={`/${lang}/product/${item.slug}`} className="font-medium hover:underline">
               {item.name}
             </Link>
-            <p className="text-sm text-muted-foreground">Größe: {item.size}</p>
+            <p className="text-sm text-muted-foreground">{dictionary.product.size}: {item.size}</p>
             <p className="text-sm font-medium">${item.price.toFixed(2)}</p>
           </div>
           <Button
@@ -50,9 +54,9 @@ export default function CartItem({ item, lang }: CartItemProps) {
             size="icon"
             className="h-8 w-8 text-muted-foreground"
             onClick={() => removeItem(item.id, item.size)}
+            aria-label={dictionary.cart.remove}
           >
             <X size={16} />
-            <span className="sr-only">Artikel entfernen</span>
           </Button>
         </div>
         <div className="mt-2 flex items-center">
@@ -72,6 +76,7 @@ export default function CartItem({ item, lang }: CartItemProps) {
               value={item.quantity}
               onChange={(e) => handleQuantityChange(parseInt(e.target.value, 10) || 1)}
               className="h-8 w-12 border-0 text-center focus-visible:ring-0"
+              aria-label="Quantity"
             />
             <Button
               variant="ghost"

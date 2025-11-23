@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,6 +13,8 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/hooks/use-toast';
+import { useDictionary } from '@/hooks/use-dictionary';
+import { Locale } from '@/i18n-config';
 
 const checkoutSchema = z.object({
   email: z.string().email(),
@@ -31,10 +32,11 @@ const checkoutSchema = z.object({
 
 type CheckoutFormValues = z.infer<typeof checkoutSchema>;
 
-export default function CheckoutPage() {
+export default function CheckoutPage({ params: { lang } }: { params: { lang: Locale } }) {
   const { items, subtotal, tax, total, clearCart } = useCart();
   const router = useRouter();
   const { toast } = useToast();
+  const dictionary = useDictionary();
 
   const form = useForm<CheckoutFormValues>({
     resolver: zodResolver(checkoutSchema),
@@ -60,15 +62,17 @@ export default function CheckoutPage() {
       description: 'Thank you for your order. A confirmation email has been sent.',
     });
     clearCart();
-    router.push('/');
+    router.push(`/${lang}/`);
   };
+
+  if (!dictionary) return null;
 
   return (
     <div className="container mx-auto px-4 py-8 md:py-12">
-      <h1 className="text-3xl md:text-4xl font-headline font-bold mb-8">Checkout</h1>
+      <h1 className="text-3xl md:text-4xl font-headline font-bold mb-8">{dictionary.checkout.title}</h1>
       <div className="grid lg:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-2xl font-headline font-semibold mb-4">Shipping Information</h2>
+          <h2 className="text-2xl font-headline font-semibold mb-4">{dictionary.checkout.shippingInfo}</h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <Card>
@@ -105,7 +109,7 @@ export default function CheckoutPage() {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-headline font-semibold mb-4 pt-4">Payment Details</h2>
+              <h2 className="text-2xl font-headline font-semibold mb-4 pt-4">{dictionary.checkout.paymentDetails}</h2>
               <Card>
                 <CardContent className="p-6 space-y-4">
                   <FormField control={form.control} name="cardName" render={({ field }) => (
@@ -125,12 +129,12 @@ export default function CheckoutPage() {
                 </CardContent>
               </Card>
 
-              <Button type="submit" size="lg" className="w-full">Pay ${total.toFixed(2)}</Button>
+              <Button type="submit" size="lg" className="w-full">{dictionary.checkout.pay} ${total.toFixed(2)}</Button>
             </form>
           </Form>
         </div>
         <div className="order-first lg:order-last">
-          <h2 className="text-2xl font-headline font-semibold mb-4">Order Summary</h2>
+          <h2 className="text-2xl font-headline font-semibold mb-4">{dictionary.checkout.orderSummary}</h2>
           <Card>
             <CardContent className="p-6 space-y-4">
               {items.map(item => {
@@ -143,7 +147,7 @@ export default function CheckoutPage() {
                     </div>
                     <div className="flex-1">
                       <p className="font-medium">{item.name}</p>
-                      <p className="text-sm text-muted-foreground">Size: {item.size}</p>
+                      <p className="text-sm text-muted-foreground">{dictionary.product.size}: {item.size}</p>
                     </div>
                     <p className="font-medium">${(item.price * item.quantity).toFixed(2)}</p>
                   </div>
@@ -151,9 +155,9 @@ export default function CheckoutPage() {
               })}
               <Separator />
               <div className="space-y-2">
-                <div className="flex justify-between text-muted-foreground"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-                <div className="flex justify-between text-muted-foreground"><span>Taxes</span><span>${tax.toFixed(2)}</span></div>
-                <div className="flex justify-between font-bold text-lg"><span>Total</span><span>${total.toFixed(2)}</span></div>
+                <div className="flex justify-between text-muted-foreground"><span>{dictionary.cart.subtotal}</span><span>${subtotal.toFixed(2)}</span></div>
+                <div className="flex justify-between text-muted-foreground"><span>{dictionary.cart.taxes}</span><span>${tax.toFixed(2)}</span></div>
+                <div className="flex justify-between font-bold text-lg"><span>{dictionary.cart.total}</span><span>${total.toFixed(2)}</span></div>
               </div>
             </CardContent>
           </Card>

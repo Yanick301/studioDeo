@@ -30,18 +30,20 @@ import { useRouter } from 'next/navigation';
 import { Skeleton } from '../ui/skeleton';
 import { Locale } from '@/i18n-config';
 import LanguageSwitcher from './language-switcher';
-
-const mainNav = categories.map((category) => ({
-  href: `/category/${category.slug}`,
-  label: category.name,
-  slug: category.slug,
-}));
+import { useDictionary } from '@/hooks/use-dictionary';
 
 export default function Header({ lang }: { lang: Locale }) {
   const isMobile = useIsMobile();
   const { isAuthenticated, user, logout, isUserLoading } = useAuth();
   const [showSearch, setShowSearch] = useState(false);
   const router = useRouter();
+  const dictionary = useDictionary();
+
+  const mainNav = dictionary ? categories.map((category) => ({
+    href: `/category/${category.slug}`,
+    label: dictionary.categories[category.slug as keyof typeof dictionary.categories] || category.name,
+    slug: category.slug,
+  })) : [];
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -55,7 +57,7 @@ export default function Header({ lang }: { lang: Locale }) {
   };
 
   const AuthButton = () => {
-    if (isUserLoading) {
+    if (isUserLoading || !dictionary) {
       return <Skeleton className="h-8 w-8 rounded-full" />;
     }
 
@@ -82,7 +84,7 @@ export default function Header({ lang }: { lang: Locale }) {
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={() => logout()}>
               <LogOut className="mr-2 h-4 w-4" />
-              <span>Log out</span>
+              <span>{dictionary.auth.logout}</span>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -91,7 +93,7 @@ export default function Header({ lang }: { lang: Locale }) {
     return (
       <Button asChild variant="ghost" size={isMobile ? 'icon' : 'default'}>
         <Link href={`/${lang}/login`}>
-          {isMobile ? <LogIn /> : 'Login'}
+          {isMobile ? <LogIn /> : (dictionary.auth.login)}
         </Link>
       </Button>
     );
@@ -162,9 +164,9 @@ export default function Header({ lang }: { lang: Locale }) {
                     <span className="sr-only">Search</span>
                 </Button>
                 {showSearch && (
-                    <div className="absolute top-full right-0 mt-2 w-64">
+                    <div className="absolute top-full right-0 mt-2 w-64 z-50">
                          <form onSubmit={handleSearch} className="relative">
-                            <Input name="search" placeholder="Produkte suchen..." className="w-full" autoFocus />
+                            <Input name="search" placeholder={dictionary?.header.searchPlaceholder || "Search products..."} className="w-full" autoFocus onBlur={() => setShowSearch(false)} />
                          </form>
                     </div>
                 )}
