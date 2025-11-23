@@ -261,6 +261,106 @@
       "imageHint": "unisex coat"
     },
     {
+      "id": "prod-47",
+      "imageUrl": "/images-product/robe-midi-en-soie-gucci.jpg",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-48",
+      "imageUrl": "/images-product/blazer-croise-balmain.jpg",
+      "imageHint": "women blazer"
+    },
+    {
+      "id": "prod-49",
+      "imageUrl": "/images-product/pull-col-roule-cachemire-loro-piana-femme.jpg",
+      "imageHint": "women turtleneck"
+    },
+    {
+      "id": "prod-50",
+      "imageUrl": "/images-product/pantalon-large-en-laine-max-mara.jpg",
+      "imageHint": "women trousers"
+    },
+    {
+      "id": "prod-51",
+      "imageUrl": "/images-product/jean-slim-premium-diesel.jpg",
+      "imageHint": "women jeans"
+    },
+    {
+      "id": "prod-52",
+      "imageUrl": "/images-product/chemisier-en-soie-imprimee-saint-laurent.jpg",
+      "imageHint": "women blouse"
+    },
+    {
+      "id": "prod-53",
+      "imageUrl": "/images-product/robe-courte-en-laine-prada.jpg",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-54",
+      "imageUrl": "/images-product/manteau-long-en-cachemire-max-mara.jpg",
+      "imageHint": "women coat"
+    },
+    {
+      "id": "prod-55",
+      "imageUrl": "/images-product/veste-courte-matelassee-moncler.jpg",
+      "imageHint": "women jacket"
+    },
+    {
+      "id": "prod-56",
+      "imageUrl": "/images-product/pull-oversize-torsade-chloe.jpg",
+      "imageHint": "women sweater"
+    },
+    {
+      "id": "prod-57",
+      "imageUrl": "/images-product/jupe-crayon-en-laine-hugo-boss.jpg",
+      "imageHint": "women skirt"
+    },
+    {
+      "id": "prod-58",
+      "imageUrl": "/images-product/robe-longue-plissee-valentino.jpg",
+      "imageHint": "women gown"
+    },
+    {
+      "id": "prod-59",
+      "imageUrl": "/images-product/chemise-en-coton-premium-burberry.jpg",
+      "imageHint": "women shirt"
+    },
+    {
+      "id": "prod-60",
+      "imageUrl": "/images-product/robe-portefeuille-en-soie-diane-von-furstenberg.jpg",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-61",
+      "imageUrl": "/images-product/pantalon-tailleur-dior-femme.jpg",
+      "imageHint": "women trousers"
+    },
+    {
+      "id": "prod-62",
+      "imageUrl": "/images-product/pull-col-bateau-ralph-lauren.jpg",
+      "imageHint": "women sweater"
+    },
+    {
+      "id": "prod-63",
+      "imageUrl": "/images-product/cardigan-long-en-cachemire-brunello-cucinelli.jpg",
+      "imageHint": "women cardigan"
+    },
+    {
+      "id": "prod-64",
+      "imageUrl": "/images-product/robe-asymetrique-givenchy.jpg",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-65",
+      "imageUrl": "/images-product/blouse-satinee-stella-mccartney.jpg",
+      "imageHint": "women blouse"
+    },
+    {
+      "id": "prod-66",
+      "imageUrl": "/images-product/combinaison-pantalon-balenciaga.jpg",
+      "imageHint": "women jumpsuit"
+    },
+    {
       "id": "prod-gallery-1-1",
       "imageUrl": "/images-product/prod-gallery-1-1.jpg",
       "imageHint": "men shirt"
