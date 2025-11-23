@@ -3,231 +3,301 @@
     {
       "id": "hero-1",
       "description": "Stylish person looking out over a city",
-      "imageUrl": "https://images.unsplash.com/photo-1676914333302-53615f404416?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYXNoaW9uJTIwY2l0eXxlbnwwfHx8fDE3NjM4OTUxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/hero-1.jpg",
       "imageHint": "fashion city"
     },
     {
       "id": "cat-mens",
       "description": "Man wearing a modern outfit",
-      "imageUrl": "https://images.unsplash.com/photo-1552168212-9ceb61083ba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtZW5zJTIwZmFzaGlvbnxlbnwwfHx8fDE3NjM4MTgzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/cat-mens.jpg",
       "imageHint": "mens fashion"
     },
     {
       "id": "cat-womens",
       "description": "Woman in an elegant dress",
-      "imageUrl": "https://images.unsplash.com/photo-1634926938182-f6f6ad286640?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21lbnMlMjBmYXNoaW9ufGVufDB8fHx8MTc2Mzg4NDgyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/cat-womens.jpg",
       "imageHint": "womens fashion"
     },
     {
       "id": "cat-accessories",
       "description": "Close up of a watch and a bracelet",
-      "imageUrl": "https://images.unsplash.com/photo-1589363463135-e811e08d8ace?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYXNoaW9uJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzYzODk1MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/cat-accessories.jpg",
       "imageHint": "fashion accessories"
     },
     {
       "id": "cat-winter",
       "description": "Person wearing a warm winter coat in a snowy environment",
-      "imageUrl": "https://images.unsplash.com/photo-1636096625948-c1235f1b2e9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aW50ZXIlMjBjbG90aGluZ3xlbnwwfHx8fDE3NjM3OTQ1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/cat-winter.jpg",
       "imageHint": "winter clothing"
     },
     {
       "id": "prod-1",
-      "imageUrl": "https://images.unsplash.com/photo-1610871276695-5e79e9cd497c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjBjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-long-laine-hugo-boss.jpg",
       "imageHint": "men coat"
     },
     {
       "id": "prod-2",
-      "imageUrl": "https://images.unsplash.com/photo-1675877879221-871aa9f7c314?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/doudoune-matelassee-moncler.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-3",
-      "imageUrl": "https://images.unsplash.com/photo-1516705346105-1604914311cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBwYXJrYXxlbnwwfHx8fDE3NjM5MDAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/parka-arctic-canada-goose.jpg",
       "imageHint": "men parka"
     },
     {
       "id": "prod-4",
-      "imageUrl": "https://images.unsplash.com/photo-1538851575247-66d86ffcaabf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-cachemire-loro-piana-homme.jpg",
       "imageHint": "men coat"
     },
     {
       "id": "prod-5",
-      "imageUrl": "https://images.unsplash.com/photo-1715608069599-9b8bf8df52e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVuJTIwamFja2V0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/blouson-shearling-saint-laurent.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-6",
-      "imageUrl": "https://images.unsplash.com/photo-1608739871816-346c9db7e122?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjB0dXJ0bGVuZWNrfGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/pull-col-roule-laine-merinos-paul-smith.jpg",
       "imageHint": "men turtleneck"
     },
     {
       "id": "prod-7",
-      "imageUrl": "https://images.unsplash.com/photo-1730952756912-9a3ac64c5491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBvdmVyc2hpcnR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/surchemise-doublee-acne-studios-homme.jpg",
       "imageHint": "men overshirt"
     },
     {
       "id": "prod-8",
-      "imageUrl": "https://images.unsplash.com/photo-1575473970760-b50a70461e1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjB2ZXN0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/doudoune-sans-manche-polo-ralph-lauren.jpg",
       "imageHint": "men vest"
     },
     {
       "id": "prod-9",
-      "imageUrl": "https://images.unsplash.com/photo-1621444450548-72c882e235f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjB0cmVuY2hjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-trench-double-burberry.jpg",
       "imageHint": "men trenchcoat"
     },
     {
       "id": "prod-10",
-      "imageUrl": "https://images.unsplash.com/photo-1706791722992-3050e51d8e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZW4lMjBzd2VhdGVyfGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/pull-torsade-epais-dior-homme.jpg",
       "imageHint": "men sweater"
     },
     {
       "id": "prod-11",
-      "imageUrl": "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/veste-technique-impermeable-tnf-black-series.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-12",
-      "imageUrl": "https://images.unsplash.com/photo-1495385794356-15371f348c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21lbiUyMGRyZXNzfGVufDB8fHx8MTc2Mzg5NTEyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/robe-midi-en-soie-gucci.jpg",
       "imageHint": "women dress"
     },
     {
+      "id": "prod-13",
+      "imageUrl": "/images-product/blazer-croise-balmain.jpg",
+      "imageHint": "women blazer"
+    },
+    {
+      "id": "prod-14",
+      "imageUrl": "/images-product/pull-col-roule-cachemire-loro-piana-femme.jpg",
+      "imageHint": "women turtleneck"
+    },
+    {
+      "id": "prod-15",
+      "imageUrl": "/images-product/pantalon-large-en-laine-max-mara.jpg",
+      "imageHint": "women trousers"
+    },
+    {
+      "id": "prod-16",
+      "imageUrl": "/images-product/jean-slim-premium-diesel.jpg",
+      "imageHint": "women jeans"
+    },
+    {
+      "id": "prod-17",
+      "imageUrl": "/images-product/chemisier-en-soie-imprimee-saint-laurent.jpg",
+      "imageHint": "women blouse"
+    },
+    {
+      "id": "prod-18",
+      "imageUrl": "/images-product/robe-courte-en-laine-prada.jpg",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-19",
+      "imageUrl": "/images-product/manteau-long-en-cachemire-max-mara.jpg",
+      "imageHint": "women coat"
+    },
+    {
+      "id": "prod-20",
+      "imageUrl": "/images-product/veste-courte-matelassee-moncler.jpg",
+      "imageHint": "women jacket"
+    },
+    {
+      "id": "prod-21",
+      "imageUrl": "/images-product/pull-oversize-torsade-chloe.jpg",
+      "imageHint": "women sweater"
+    },
+    {
+      "id": "prod-22",
+      "imageUrl": "/images-product/jupe-crayon-en-laine-hugo-boss.jpg",
+      "imageHint": "women skirt"
+    },
+    {
+      "id": "prod-23",
+      "imageUrl": "/images-product/robe-longue-plissee-valentino.jpg",
+      "imageHint": "women gown"
+    },
+    {
+      "id": "prod-24",
+      "imageUrl": "/images-product/chemise-en-coton-premium-burberry.jpg",
+      "imageHint": "women shirt"
+    },
+    {
+      "id": "prod-25",
+      "imageUrl": "/images-product/robe-portefeuille-en-soie-diane-von-furstenberg.jpg",
+      "imageHint": "women dress"
+    },
+    {
+      "id": "prod-26",
+      "imageUrl": "/images-product/pantalon-tailleur-dior-femme.jpg",
+      "imageHint": "women trousers"
+    },
+    {
       "id": "prod-27",
-      "imageUrl": "https://images.unsplash.com/photo-1680066118527-b995ddf4bdae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVuJTIwY29hdHxlbnwwfHx8fDE3NjM5MDAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-long-laine-hugo-boss.jpg",
       "imageHint": "men coat"
     },
     {
       "id": "prod-28",
-      "imageUrl": "https://images.unsplash.com/photo-1654719961311-72d4351e419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/doudoune-matelassee-moncler.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-29",
-      "imageUrl": "https://images.unsplash.com/photo-1516705346105-1604914311cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBwYXJrYXxlbnwwfHx8fDE3NjM5MDAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/parka-arctic-canada-goose.jpg",
       "imageHint": "men parka"
     },
     {
       "id": "prod-30",
-      "imageUrl": "https://images.unsplash.com/photo-1610871277087-9b65b6fe623c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtZW4lMjBjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-cachemire-loro-piana-homme.jpg",
       "imageHint": "men coat"
     },
     {
       "id": "prod-31",
-      "imageUrl": "https://images.unsplash.com/photo-1548883354-94bcfe321cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/blouson-shearling-saint-laurent.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-32",
-      "imageUrl": "https://images.unsplash.com/photo-1585253038301-8924109b6629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZW4lMjB0dXJ0bGVuZWNrfGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/pull-col-roule-laine-merinos-paul-smith.jpg",
       "imageHint": "men turtleneck"
     },
     {
       "id": "prod-33",
-      "imageUrl": "https://images.unsplash.com/photo-1666358085449-a10a39f33942?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjBvdmVyc2hpcnR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/surchemise-doublee-acne-studios-homme.jpg",
       "imageHint": "men overshirt"
     },
     {
       "id": "prod-34",
-      "imageUrl": "https://images.unsplash.com/photo-1551828060-1bcda73c75bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjB2ZXN0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/doudoune-sans-manche-polo-ralph-lauren.jpg",
       "imageHint": "men vest"
     },
     {
       "id": "prod-35",
-      "imageUrl": "https://images.unsplash.com/photo-1621880199574-167795c2553f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtZW4lMjB0cmVuY2hjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-trench-double-burberry.jpg",
       "imageHint": "men trenchcoat"
     },
     {
       "id": "prod-36",
-      "imageUrl": "https://images.unsplash.com/photo-1714023498720-ccb2fdaa6a7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtZW4lMjBzd2VhdGVyfGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/pull-torsade-epais-dior-homme.jpg",
       "imageHint": "men sweater"
     },
     {
       "id": "prod-37",
-      "imageUrl": "https://images.unsplash.com/photo-1675877879221-871aa9f7c314?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/veste-technique-impermeable-tnf-black-series.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-38",
-      "imageUrl": "https://images.unsplash.com/photo-1541840031508-326b77c9a17e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBwYW50c3xlbnwwfHx8fDE3NjM4OTUxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/pantalon-thermique-nike-acg.jpg",
       "imageHint": "men pants"
     },
     {
       "id": "prod-39",
-      "imageUrl": "https://images.unsplash.com/photo-1637370426939-e3221ea49baa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBwZWFjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/caban-laine-double-sandro.jpg",
       "imageHint": "men peacoat"
     },
     {
       "id": "prod-40",
-      "imageUrl": "https://images.unsplash.com/photo-1725106028906-695e57afb682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZW4lMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/doudoune-premium-armani-exchange.jpg",
       "imageHint": "men jacket"
     },
     {
       "id": "prod-41",
-      "imageUrl": "https://images.unsplash.com/photo-1725106028906-695e57afb682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZW4lMjBjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-velours-zegna.jpg",
       "imageHint": "men coat"
     },
     {
       "id": "prod-42",
-      "imageUrl": "https://images.unsplash.com/photo-1550354800-d4d6a01a2cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-long-ceinture-laine-max-mara.jpg",
       "imageHint": "men coat"
     },
     {
       "id": "prod-43",
-      "imageUrl": "https://images.unsplash.com/photo-1516705346105-1604914311cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBwYXJrYXxlbnwwfHx8fDE3NjM5MDAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/parka-fourrure-synthetique-canada-goose.jpg",
       "imageHint": "men parka"
     },
     {
       "id": "prod-44",
-      "imageUrl": "https://images.unsplash.com/photo-1605892873728-6a549c526bd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1bmlzZXglMjBqYWNrZXR8ZW58MHx8fHwxNzYzOTAwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/blouson-shearling-acne-studios-femme.jpg",
       "imageHint": "unisex jacket"
     },
     {
       "id": "prod-45",
-      "imageUrl": "https://images.unsplash.com/photo-1684361435984-753ed505540e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1bmlzZXglMjBzd2VhdGVyfGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/pull-oversized-laine-jacquemus.jpg",
       "imageHint": "unisex sweater"
     },
     {
       "id": "prod-46",
-      "imageUrl": "https://images.unsplash.com/photo-1666348990135-b2bc0bb51d75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1bmlzZXglMjBjb2F0fGVufDB8fHx8MTc2MzkwMDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/manteau-puffer-xxl-zara-premium.jpg",
       "imageHint": "unisex coat"
     },
     {
       "id": "prod-gallery-1-1",
-      "imageUrl": "https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZW4lMjBzaGlydHxlbnwwfHx8fDE3NjM4NjcyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/prod-gallery-1-1.jpg",
       "imageHint": "men shirt"
     },
     {
       "id": "prod-gallery-1-2",
-      "imageUrl": "https://images.unsplash.com/photo-1696254790588-f22848a48b9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzaGlydCUyMGRldGFpbHxlbnwwfHx8fDE3NjM4MjE4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/prod-gallery-1-2.jpg",
       "imageHint": "shirt detail"
     },
     {
       "id": "prod-gallery-1-3",
-      "imageUrl": "https://images.unsplash.com/photo-1528458909336-e7a0adfed0a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2Mzg2OTMyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/prod-gallery-1-3.jpg",
       "imageHint": "fabric texture"
     },
     {
       "id": "avatar-1",
-      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/avatar-1.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-2",
-      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/avatar-2.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-3",
-      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzODQwMDk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/avatar-3.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-4",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/avatar-4.jpg",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-5",
-      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzODQwMDk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images-product/avatar-5.jpg",
       "imageHint": "person portrait"
     }
   ]
