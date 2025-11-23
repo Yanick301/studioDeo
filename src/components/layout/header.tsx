@@ -9,6 +9,7 @@ import {
   SheetTrigger,
   SheetHeader,
   SheetTitle,
+  SheetClose,
 } from '@/components/ui/sheet';
 import {
   DropdownMenu,
@@ -121,20 +122,25 @@ export default function Header({ lang }: { lang: Locale }) {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left">
+      <SheetContent side="left" className="w-full max-w-sm">
         <SheetHeader>
-          <SheetTitle><Logo lang={lang} /></SheetTitle>
+          <SheetTitle>
+            <SheetClose asChild>
+              <Logo lang={lang} />
+            </SheetClose>
+          </SheetTitle>
         </SheetHeader>
         <div className="py-4">
           <nav className="grid gap-4">
             {mainNav.map((item) => (
-              <Link
-                key={item.href}
-                href={`/${lang}${item.href}`}
-                className="text-lg font-semibold transition-colors hover:text-primary"
-              >
-                {item.label}
-              </Link>
+              <SheetClose asChild key={item.href}>
+                <Link
+                  href={`/${lang}${item.href}`}
+                  className="text-lg font-semibold transition-colors hover:text-primary"
+                >
+                  {item.label}
+                </Link>
+              </SheetClose>
             ))}
           </nav>
         </div>
@@ -145,7 +151,9 @@ export default function Header({ lang }: { lang: Locale }) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm">
       <div className="container flex h-16 items-center">
-        <MobileNav />
+        <div className="flex items-center md:hidden">
+            <MobileNav />
+        </div>
         <div className="hidden md:flex">
          <Logo lang={lang} />
         </div>
