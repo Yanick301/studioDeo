@@ -3,31 +3,31 @@
     {
       "id": "hero-1",
       "description": "Stylish person looking out over a city",
-      "imageUrl": "/images-product/hero-1.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1654552643262-192b454c5c62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXNoaW9uJTIwY2l0eXxlbnwwfHx8fDE3NjM4OTUxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fashion city"
     },
     {
       "id": "cat-mens",
       "description": "Man wearing a modern outfit",
-      "imageUrl": "/images-product/cat-mens.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1617137968427-85924c800a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW5zJTIwZmFzaGlvbnxlbnwwfHx8fDE3NjM4MTgzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mens fashion"
     },
     {
       "id": "cat-womens",
       "description": "Woman in an elegant dress",
-      "imageUrl": "/images-product/cat-womens.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1590330297626-d7aff25a0431?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21lbnMlMjBmYXNoaW9ufGVufDB8fHx8MTc2Mzg4NDgyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "womens fashion"
     },
     {
       "id": "cat-accessories",
       "description": "Close up of a watch and a bracelet",
-      "imageUrl": "/images-product/cat-accessories.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXNoaW9uJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzYzODk1MTI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fashion accessories"
     },
     {
       "id": "cat-winter",
       "description": "Person wearing a warm winter coat in a snowy environment",
-      "imageUrl": "/images-product/cat-winter.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1445205170230-053b83016050?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3aW50ZXIlMjBjbG90aGluZ3xlbnwwfHx8fDE3NjM3OTQ1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "winter clothing"
     },
     {
@@ -527,27 +527,27 @@
     },
     {
       "id": "avatar-1",
-      "imageUrl": "/images-product/avatar-1.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-2",
-      "imageUrl": "/images-product/avatar-2.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-3",
-      "imageUrl": "/images-product/avatar-3.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-4",
-      "imageUrl": "/images-product/avatar-4.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     },
     {
       "id": "avatar-5",
-      "imageUrl": "/images-product/avatar-5.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjM4NDAwOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     }
   ]
